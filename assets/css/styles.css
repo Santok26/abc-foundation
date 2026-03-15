@@ -162,6 +162,32 @@ select:focus {
     white-space: nowrap;
 }
 
+.translate-widget {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.translate-widget .goog-te-gadget-simple {
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 0;
+    padding: 0;
+}
+
+.translate-widget .goog-te-gadget-icon {
+    display: none;
+}
+
+.translate-widget .goog-te-menu-value {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+    margin: 0;
+}
+
 .translate-widget select {
     background: #ffffff;
     border: 1px solid rgba(22, 163, 74, 0.7);
