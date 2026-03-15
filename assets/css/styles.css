@@ -1,4 +1,4 @@
-﻿/* Custom styles for ABC Foundation website */
+/* Custom styles for ABC Foundation website */
 
 :root {
     --green-700: #15803d;
@@ -23,6 +23,15 @@ body {
     color: #e2e8f0;
 }
 
+body.page-fade {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+body.page-fade.is-loaded {
+    opacity: 1;
+}
+
 h1,
 h2,
 h3,
@@ -44,12 +53,116 @@ select:focus {
     position: relative;
 }
 
-.hero::before {
+.hero.hero-overlay::before {
     content: '';
     position: absolute;
     inset: 0;
     background: linear-gradient(120deg, rgba(3, 7, 18, 0.85), rgba(15, 118, 110, 0.35));
     z-index: 1;
+}
+
+.hero-gradient {
+    background: linear-gradient(120deg, #d1fae5 0%, #f8fafc 55%, #ffffff 100%);
+}
+
+.hero-gradient .text-gray-900 {
+    color: #0f172a;
+}
+
+.hero-gradient .text-gray-700 {
+    color: #334155;
+}
+
+.hero-visual {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-shape {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(40px);
+    opacity: 0.55;
+    animation: float 12s ease-in-out infinite;
+}
+
+.hero-shape.shape-a {
+    width: 220px;
+    height: 220px;
+    background: rgba(34, 197, 94, 0.35);
+    top: -40px;
+    left: -30px;
+}
+
+.hero-shape.shape-b {
+    width: 280px;
+    height: 280px;
+    background: rgba(16, 185, 129, 0.25);
+    bottom: -80px;
+    right: -40px;
+    animation-delay: 1.5s;
+}
+
+.hero-shape.shape-c {
+    width: 180px;
+    height: 180px;
+    background: rgba(14, 116, 144, 0.25);
+    top: 40%;
+    right: 15%;
+    animation-delay: 0.8s;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(18px);
+    }
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.partner-logo {
+    filter: grayscale(1);
+    opacity: 0.7;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.partner-logo:hover {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+.map-marker {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #22c55e;
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.2);
+}
+
+.parallax-section {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 767px) {
+    .parallax-section {
+        background-attachment: scroll;
+    }
 }
 
 /* Dark theme overrides for Tailwind utility classes */
@@ -76,15 +189,6 @@ select:focus {
 .bg-white.text-green-700 {
     background-color: #ffffff;
     color: #14532d;
-}
-
-.bg-green-600.text-white,
-.bg-green-700.text-white {
-    box-shadow: 0 10px 25px rgba(34, 197, 94, 0.25);
-}
-
-.bg-white.text-green-700:hover {
-    background-color: #f8fafc;
 }
 
 .bg-green-600 {
@@ -153,7 +257,7 @@ textarea::placeholder {
     color: var(--slate-400);
 }
 
-.hero > div {
+.hero.hero-overlay > div {
     position: relative;
     z-index: 2;
 }
@@ -301,6 +405,57 @@ textarea::placeholder {
     box-shadow: 0 10px 20px rgba(22, 163, 74, 0.2);
 }
 
+.gallery-filter.selected {
+    background-color: #22c55e;
+    color: #0b1120;
+}
+
+.btn-primary {
+    background-color: #22c55e;
+    color: #ffffff;
+    padding: 0.75rem 1.75rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px rgba(34, 197, 94, 0.25);
+}
+
+.btn-secondary {
+    border: 2px solid #22c55e;
+    color: #e2e8f0;
+    padding: 0.75rem 1.75rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #22c55e;
+    color: #0b1120;
+}
+
+.hero-gradient .btn-secondary {
+    color: #14532d;
+}
+
+.sticky-donate {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 50;
+}
+
+@media (max-width: 639px) {
+    .sticky-donate {
+        right: 1rem;
+        bottom: 1rem;
+    }
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -312,5 +467,3 @@ img {
         display: none;
     }
 }
-
-

@@ -1,6 +1,11 @@
 ﻿// ABC Foundation - Main JavaScript
 
 document.addEventListener('DOMContentLoaded', function () {
+    document.body.classList.add('page-fade');
+    requestAnimationFrame(() => {
+        document.body.classList.add('is-loaded');
+    });
+
     const hamburger = document.getElementById('hamburger');
     const menu = document.getElementById('mobile-menu');
 
@@ -101,6 +106,21 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    const animatedItems = document.querySelectorAll('[data-animate=\"fade-up\"]');
+    if (animatedItems.length) {
+        const reveal = (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        const animationObserver = new IntersectionObserver(reveal, { threshold: 0.2 });
+        animatedItems.forEach((item) => animationObserver.observe(item));
+    }
+
     const donationOptions = document.querySelectorAll('.donation-option');
     const customAmountInput = document.getElementById('custom-amount');
 
@@ -167,6 +187,27 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    const filterButtons = document.querySelectorAll('.gallery-filter');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    if (filterButtons.length && galleryItems.length) {
+        filterButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const filter = button.dataset.filter;
+                filterButtons.forEach((btn) => btn.classList.remove('selected'));
+                button.classList.add('selected');
+
+                galleryItems.forEach((item) => {
+                    const category = item.dataset.category;
+                    if (filter === 'all' || category === filter) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    }
+
     const demoForms = document.querySelectorAll('form[data-demo="true"]');
     demoForms.forEach((form) => {
         form.addEventListener('submit', function (event) {
@@ -186,6 +227,15 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    if (!document.querySelector('.sticky-donate')) {
+        const donateButton = document.createElement('a');
+        donateButton.href = 'donate.html';
+        donateButton.className = 'sticky-donate btn-primary';
+        donateButton.textContent = 'Donate Now';
+        donateButton.setAttribute('aria-label', 'Donate Now');
+        document.body.appendChild(donateButton);
+    }
 });
 
 

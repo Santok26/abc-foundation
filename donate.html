@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
+<script defer data-domain="abc-foundation.netlify.app" src="https://plausible.io/js/script.js"></script>
 </head>
 
 <body class="bg-gray-50">
@@ -63,9 +64,9 @@
                     workshops, and sustainable infrastructure upgrades. Together, we restore lakes, plant trees, and
                     empower volunteers to protect local ecosystems.</p>
                 <ul class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-gray-700 text-sm">
-                    <li class="bg-white rounded-xl p-4 shadow-sm">₹500 funds 5 native saplings.</li>
-                    <li class="bg-white rounded-xl p-4 shadow-sm">₹1000 supports a school workshop.</li>
-                    <li class="bg-white rounded-xl p-4 shadow-sm">₹2500 helps restore 10 meters of lakeside habitat.</li>
+                    <li class="bg-white rounded-xl p-4 shadow-sm">₹500 → Plants 5 trees.</li>
+                    <li class="bg-white rounded-xl p-4 shadow-sm">₹1000 → Supports water restoration.</li>
+                    <li class="bg-white rounded-xl p-4 shadow-sm">₹5000 → Funds a plantation drive.</li>
                 </ul>
             </div>
             <form class="bg-white rounded-2xl shadow-sm p-8 max-w-4xl mx-auto" data-demo="true">
@@ -124,9 +125,7 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit"
-                    class="bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-700 w-full">Donate
-                    Now</button>
+                <button type="submit" class="btn-primary w-full">Donate Now</button>
             </form>
         </div>
     </section>
@@ -134,35 +133,11 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
     <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
             <div>
                 <h3 class="text-lg font-semibold mb-4">About ABC Foundation</h3>
                 <p class="text-gray-300">We are a community-driven NGO restoring ecosystems, empowering local
                     volunteers, and building resilient green spaces for future generations.</p>
-                <form class="mt-4 flex flex-col sm:flex-row gap-3" data-demo="true">
-                    <label for="footer-email" class="sr-only">Email address</label>
-                    <input type="email" id="footer-email" name="footer-email"
-                        class="w-full px-4 py-2 rounded-full text-gray-900" placeholder="Email address" required>
-                    <button type="submit"
-                        class="bg-green-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-green-700">Subscribe</button>
-                </form>
-            </div>
-            <div>
-                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                <ul class="space-y-2">
-                    <li><a href="about.html" class="hover:text-green-300">About</a></li>
-                    <li><a href="projects.html" class="hover:text-green-300">Projects</a></li>
-                    <li><a href="volunteer.html" class="hover:text-green-300">Volunteer</a></li>
-                    <li><a href="donate.html" class="hover:text-green-300">Donate</a></li>
-                    <li><a href="gallery.html" class="hover:text-green-300">Gallery</a></li>
-                    <li><a href="contact.html" class="hover:text-green-300">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
-                <p class="text-gray-300">123 Green Street, Eco City</p>
-                <p class="text-gray-300">Phone: (123) 456-7890</p>
-                <p class="text-gray-300">Email: info@abc-foundation.org</p>
                 <div class="flex items-center space-x-4 mt-4">
                     <a href="#" class="hover:text-green-300" aria-label="Facebook">
                         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -184,6 +159,33 @@
                     </a>
                 </div>
             </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="hover:text-green-300">About</a></li>
+                    <li><a href="projects.html" class="hover:text-green-300">Projects</a></li>
+                    <li><a href="volunteer.html" class="hover:text-green-300">Volunteer</a></li>
+                    <li><a href="donate.html" class="hover:text-green-300">Donate</a></li>
+                    <li><a href="gallery.html" class="hover:text-green-300">Gallery</a></li>
+                    <li><a href="contact.html" class="hover:text-green-300">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                <p class="text-gray-300">123 Green Street, Eco City</p>
+                <p class="text-gray-300">Phone: (123) 456-7890</p>
+                <p class="text-gray-300">Email: info@abc-foundation.org</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                <p class="text-gray-300 mb-4">Get impact stories and campaign updates.</p>
+                <form class="flex flex-col gap-3" data-demo="true">
+                    <label for="footer-email" class="sr-only">Email address</label>
+                    <input type="email" id="footer-email" name="footer-email"
+                        class="w-full px-4 py-2 rounded-full text-gray-900" placeholder="Email address" required>
+                    <button type="submit" class="btn-primary text-sm">Subscribe</button>
+                </form>
+            </div>
         </div>
         <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
             <p>&copy; 2026 ABC Foundation. All rights reserved.</p>
@@ -195,6 +197,9 @@
 </body>
 
 </html>
+
+
+
 
 
 

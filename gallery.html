@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
+<script defer data-domain="abc-foundation.netlify.app" src="https://plausible.io/js/script.js"></script>
 </head>
 
 <body class="bg-gray-50">
@@ -57,52 +58,58 @@
                 <p class="text-lg text-gray-600">Snapshots from our fieldwork, volunteer drives, and restoration
                     projects.</p>
             </div>
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <button class="gallery-filter btn-primary text-sm selected" data-filter="all">All</button>
+                <button class="gallery-filter btn-secondary text-sm" data-filter="plantation">Plantation</button>
+                <button class="gallery-filter btn-secondary text-sm" data-filter="water">Water Projects</button>
+                <button class="gallery-filter btn-secondary text-sm" data-filter="community">Community Work</button>
+            </div>
             <div class="masonry">
-                <div class="masonry-item">
+                <div class="masonry-item gallery-item" data-category="plantation">
                     <img loading="lazy" src="https://source.unsplash.com/random/500x650/?environment1" data-full="https://source.unsplash.com/random/1200x800/?environment1"
                         alt="Environmental conservation project" class="gallery-image w-full rounded-2xl">
                 </div>
-                <div class="masonry-item">
+                <div class="masonry-item gallery-item" data-category="plantation">
                     <img loading="lazy" src="https://source.unsplash.com/random/500x720/?environment2" data-full="https://source.unsplash.com/random/1200x800/?environment2" alt="Tree planting initiative"
                         class="gallery-image w-full rounded-2xl">
                 </div>
-                <div class="masonry-item">
+                <div class="masonry-item gallery-item" data-category="water">
                     <img loading="lazy" src="https://source.unsplash.com/random/500x600/?environment3" data-full="https://source.unsplash.com/random/1200x800/?environment3" alt="Water conservation efforts"
                         class="gallery-image w-full rounded-2xl">
                 </div>
-                <div class="masonry-item">
+                <div class="masonry-item gallery-item" data-category="community">
                     <img loading="lazy" src="https://source.unsplash.com/random/500x780/?environment4" data-full="https://source.unsplash.com/random/1200x800/?environment4" alt="Community clean-up event"
                         class="gallery-image w-full rounded-2xl">
                 </div>
-                <div class="masonry-item">
+                <div class="masonry-item gallery-item" data-category="community">
                     <img loading="lazy" src="https://source.unsplash.com/random/500x640/?environment5" data-full="https://source.unsplash.com/random/1200x800/?environment5" alt="Wildlife protection"
                         class="gallery-image w-full rounded-2xl">
                 </div>
-                <div class="masonry-item">
+                <div class="masonry-item gallery-item" data-category="plantation">
                     <img loading="lazy" src="https://source.unsplash.com/random/500x700/?environment6" data-full="https://source.unsplash.com/random/1200x800/?environment6" alt="Sustainable farming"
                         class="gallery-image w-full rounded-2xl">
                 </div>
-                <div class="masonry-item">
+                <div class="masonry-item gallery-item" data-category="water">
                     <img loading="lazy" src="https://source.unsplash.com/random/500x670/?environment7" data-full="https://source.unsplash.com/random/1200x800/?environment7" alt="Renewable energy project"
                         class="gallery-image w-full rounded-2xl">
                 </div>
-                <div class="masonry-item">
+                <div class="masonry-item gallery-item" data-category="community">
                     <img loading="lazy" src="https://source.unsplash.com/random/500x730/?environment8" data-full="https://source.unsplash.com/random/1200x800/?environment8"
                         alt="Environmental education workshop" class="gallery-image w-full rounded-2xl">
                 </div>
-                <div class="masonry-item">
+                <div class="masonry-item gallery-item" data-category="water">
                     <img loading="lazy" src="https://source.unsplash.com/random/500x610/?environment9" data-full="https://source.unsplash.com/random/1200x800/?environment9" alt="River restoration"
                         class="gallery-image w-full rounded-2xl">
                 </div>
-                <div class="masonry-item">
+                <div class="masonry-item gallery-item" data-category="plantation">
                     <img loading="lazy" src="https://source.unsplash.com/random/500x750/?environment10" data-full="https://source.unsplash.com/random/1200x800/?environment10" alt="Urban greening"
                         class="gallery-image w-full rounded-2xl">
                 </div>
-                <div class="masonry-item">
+                <div class="masonry-item gallery-item" data-category="community">
                     <img loading="lazy" src="https://source.unsplash.com/random/500x660/?environment11" data-full="https://source.unsplash.com/random/1200x800/?environment11" alt="Waste management program"
                         class="gallery-image w-full rounded-2xl">
                 </div>
-                <div class="masonry-item">
+                <div class="masonry-item gallery-item" data-category="community">
                     <img loading="lazy" src="https://source.unsplash.com/random/500x690/?environment12" data-full="https://source.unsplash.com/random/1200x800/?environment12" alt="Volunteer team in action"
                         class="gallery-image w-full rounded-2xl">
                 </div>
@@ -113,35 +120,11 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
     <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
             <div>
                 <h3 class="text-lg font-semibold mb-4">About ABC Foundation</h3>
                 <p class="text-gray-300">We are a community-driven NGO restoring ecosystems, empowering local
                     volunteers, and building resilient green spaces for future generations.</p>
-                <form class="mt-4 flex flex-col sm:flex-row gap-3" data-demo="true">
-                    <label for="footer-email" class="sr-only">Email address</label>
-                    <input type="email" id="footer-email" name="footer-email"
-                        class="w-full px-4 py-2 rounded-full text-gray-900" placeholder="Email address" required>
-                    <button type="submit"
-                        class="bg-green-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-green-700">Subscribe</button>
-                </form>
-            </div>
-            <div>
-                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                <ul class="space-y-2">
-                    <li><a href="about.html" class="hover:text-green-300">About</a></li>
-                    <li><a href="projects.html" class="hover:text-green-300">Projects</a></li>
-                    <li><a href="volunteer.html" class="hover:text-green-300">Volunteer</a></li>
-                    <li><a href="donate.html" class="hover:text-green-300">Donate</a></li>
-                    <li><a href="gallery.html" class="hover:text-green-300">Gallery</a></li>
-                    <li><a href="contact.html" class="hover:text-green-300">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
-                <p class="text-gray-300">123 Green Street, Eco City</p>
-                <p class="text-gray-300">Phone: (123) 456-7890</p>
-                <p class="text-gray-300">Email: info@abc-foundation.org</p>
                 <div class="flex items-center space-x-4 mt-4">
                     <a href="#" class="hover:text-green-300" aria-label="Facebook">
                         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -163,6 +146,33 @@
                     </a>
                 </div>
             </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="hover:text-green-300">About</a></li>
+                    <li><a href="projects.html" class="hover:text-green-300">Projects</a></li>
+                    <li><a href="volunteer.html" class="hover:text-green-300">Volunteer</a></li>
+                    <li><a href="donate.html" class="hover:text-green-300">Donate</a></li>
+                    <li><a href="gallery.html" class="hover:text-green-300">Gallery</a></li>
+                    <li><a href="contact.html" class="hover:text-green-300">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                <p class="text-gray-300">123 Green Street, Eco City</p>
+                <p class="text-gray-300">Phone: (123) 456-7890</p>
+                <p class="text-gray-300">Email: info@abc-foundation.org</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                <p class="text-gray-300 mb-4">Get impact stories and campaign updates.</p>
+                <form class="flex flex-col gap-3" data-demo="true">
+                    <label for="footer-email" class="sr-only">Email address</label>
+                    <input type="email" id="footer-email" name="footer-email"
+                        class="w-full px-4 py-2 rounded-full text-gray-900" placeholder="Email address" required>
+                    <button type="submit" class="btn-primary text-sm">Subscribe</button>
+                </form>
+            </div>
         </div>
         <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
             <p>&copy; 2026 ABC Foundation. All rights reserved.</p>
@@ -174,6 +184,9 @@
 </body>
 
 </html>
+
+
+
 
 
 
