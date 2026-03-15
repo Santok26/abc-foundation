@@ -168,6 +168,42 @@ select:focus {
     width: fit-content;
 }
 
+.translate-toggle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.translate-label {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(22, 163, 74, 0.7);
+    border-radius: 9999px;
+    padding: 4px 10px;
+    font-size: 11px;
+    color: #14532d;
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.translate-label:hover,
+.translate-label:focus-visible {
+    background: #ffffff;
+    border-color: #16a34a;
+}
+
+.translate-panel {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 6px);
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid rgba(22, 163, 74, 0.3);
+    border-radius: 12px;
+    padding: 6px 8px;
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.15);
+    z-index: 30;
+}
+
 .translate-widget .goog-te-gadget-simple {
     display: inline-flex;
     align-items: center;
@@ -186,6 +222,23 @@ select:focus {
     gap: 6px;
     padding: 0;
     margin: 0;
+    font-size: 0 !important;
+}
+
+.translate-widget .goog-te-menu-value span {
+    display: none !important;
+}
+
+.translate-widget .goog-te-menu-value i,
+.translate-widget .goog-te-menu-value img {
+    display: none !important;
+}
+
+.translate-widget .goog-te-menu-value::before {
+    content: "Language ▾";
+    font-size: 11px;
+    color: #14532d;
+    letter-spacing: 0.02em;
 }
 
 .translate-widget select {

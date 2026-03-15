@@ -6,6 +6,28 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.classList.add('is-loaded');
     });
 
+    const translateToggle = document.getElementById('translate-toggle');
+    const translatePanel = document.getElementById('google-translate-panel');
+    if (translateToggle && translatePanel) {
+        translateToggle.addEventListener('click', function () {
+            const isOpen = !translatePanel.hasAttribute('hidden');
+            if (isOpen) {
+                translatePanel.setAttribute('hidden', '');
+                translateToggle.setAttribute('aria-expanded', 'false');
+            } else {
+                translatePanel.removeAttribute('hidden');
+                translateToggle.setAttribute('aria-expanded', 'true');
+            }
+        });
+
+        document.addEventListener('click', function (event) {
+            if (!translatePanel.contains(event.target) && event.target !== translateToggle) {
+                translatePanel.setAttribute('hidden', '');
+                translateToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
     const hamburger = document.getElementById('hamburger');
     const menu = document.getElementById('mobile-menu');
 
