@@ -231,6 +231,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!document.querySelector('.sticky-donate')) {
         const donateButton = document.createElement('a');
         donateButton.href = 'donate.html';
+        donateButton.id = 'sticky-donate';
         donateButton.className = 'sticky-donate btn-primary';
         donateButton.textContent = 'Donate Now';
         donateButton.setAttribute('aria-label', 'Donate Now');
