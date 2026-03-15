@@ -20,7 +20,7 @@
     <!-- Navbar -->
     <nav class="bg-green-700 text-white sticky top-0 z-50">
     <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-        <a href="index.html" class="text-2xl font-bold tracking-wide">ABC Foundation</a>
+        <a href="index.html" class="text-2xl font-bold tracking-wide" data-i18n="site_name">ABC Foundation</a>
         <button id="hamburger" class="md:hidden focus:outline-none" aria-label="Toggle navigation" aria-expanded="false"
             aria-controls="mobile-menu">
             <span class="hamburger-line"></span>
@@ -28,24 +28,48 @@
             <span class="hamburger-line"></span>
         </button>
         <ul class="hidden md:flex items-center space-x-6 text-sm font-semibold uppercase tracking-wide">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="about.html" class="nav-link">About</a></li>
-            <li><a href="projects.html" class="nav-link">Projects</a></li>
-            <li><a href="volunteer.html" class="nav-link">Volunteer</a></li>
-            <li><a href="donate.html" class="nav-link">Donate</a></li>
-            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+            <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+            <li><a href="projects.html" class="nav-link" data-i18n="nav_projects">Projects</a></li>
+            <li><a href="volunteer.html" class="nav-link" data-i18n="nav_volunteer">Volunteer</a></li>
+            <li><a href="donate.html" class="nav-link" data-i18n="nav_donate">Donate</a></li>
+            <li><a href="gallery.html" class="nav-link" data-i18n="nav_gallery">Gallery</a></li>
+            <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+            <li>
+                <label class="sr-only" for="languageSwitcher-desktop">Language</label>
+                <select id="languageSwitcher-desktop" class="language-switcher">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="ta">தமிழ்</option>
+                    <option value="te">తెలుగు</option>
+                    <option value="ml">മലയാളം</option>
+                    <option value="kn">ಕನ್ನಡ</option>
+                    <option value="gu">ગુજરાતી</option>
+                </select>
+            </li>
         </ul>
     </div>
     <div id="mobile-menu" class="mobile-menu md:hidden">
         <ul class="px-4 pb-4 space-y-3 text-sm font-semibold uppercase tracking-wide">
-            <li><a href="index.html" class="nav-link block">Home</a></li>
-            <li><a href="about.html" class="nav-link block">About</a></li>
-            <li><a href="projects.html" class="nav-link block">Projects</a></li>
-            <li><a href="volunteer.html" class="nav-link block">Volunteer</a></li>
-            <li><a href="donate.html" class="nav-link block">Donate</a></li>
-            <li><a href="gallery.html" class="nav-link block">Gallery</a></li>
-            <li><a href="contact.html" class="nav-link block">Contact</a></li>
+            <li class="pt-2">
+                <label class="sr-only" for="languageSwitcher-mobile">Language</label>
+                <select id="languageSwitcher-mobile" class="language-switcher w-full">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="ta">தமிழ்</option>
+                    <option value="te">తెలుగు</option>
+                    <option value="ml">മലയാളം</option>
+                    <option value="kn">ಕನ್ನಡ</option>
+                    <option value="gu">ગુજરાતી</option>
+                </select>
+            </li>
+            <li><a href="index.html" class="nav-link block" data-i18n="nav_home">Home</a></li>
+            <li><a href="about.html" class="nav-link block" data-i18n="nav_about">About</a></li>
+            <li><a href="projects.html" class="nav-link block" data-i18n="nav_projects">Projects</a></li>
+            <li><a href="volunteer.html" class="nav-link block" data-i18n="nav_volunteer">Volunteer</a></li>
+            <li><a href="donate.html" class="nav-link block" data-i18n="nav_donate">Donate</a></li>
+            <li><a href="gallery.html" class="nav-link block" data-i18n="nav_gallery">Gallery</a></li>
+            <li><a href="contact.html" class="nav-link block" data-i18n="nav_contact">Contact</a></li>
         </ul>
     </div>
 </nav>
@@ -59,10 +83,10 @@
                     projects.</p>
             </div>
             <div class="flex flex-wrap justify-center gap-3 mb-10">
-                <button class="gallery-filter btn-primary text-sm selected" data-filter="all">All</button>
-                <button class="gallery-filter btn-secondary text-sm" data-filter="plantation">Plantation</button>
-                <button class="gallery-filter btn-secondary text-sm" data-filter="water">Water Projects</button>
-                <button class="gallery-filter btn-secondary text-sm" data-filter="community">Community Work</button>
+                <button class="gallery-filter btn-primary text-sm selected" data-filter="all" data-i18n="gallery_filter_all">All</button>
+                <button class="gallery-filter btn-secondary text-sm" data-filter="plantation" data-i18n="gallery_filter_plantation">Plantation</button>
+                <button class="gallery-filter btn-secondary text-sm" data-filter="water" data-i18n="gallery_filter_water">Water Projects</button>
+                <button class="gallery-filter btn-secondary text-sm" data-filter="community" data-i18n="gallery_filter_community">Community Work</button>
             </div>
             <div class="masonry">
                 <div class="masonry-item gallery-item" data-category="plantation">
@@ -204,6 +228,7 @@
 
 
 
+    <script src="assets/js/i18n.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 

@@ -20,7 +20,7 @@
     <!-- Navbar -->
     <nav class="bg-green-700 text-white sticky top-0 z-50">
     <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-        <a href="index.html" class="text-2xl font-bold tracking-wide">ABC Foundation</a>
+        <a href="index.html" class="text-2xl font-bold tracking-wide" data-i18n="site_name">ABC Foundation</a>
         <button id="hamburger" class="md:hidden focus:outline-none" aria-label="Toggle navigation" aria-expanded="false"
             aria-controls="mobile-menu">
             <span class="hamburger-line"></span>
@@ -28,57 +28,71 @@
             <span class="hamburger-line"></span>
         </button>
         <ul class="hidden md:flex items-center space-x-6 text-sm font-semibold uppercase tracking-wide">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="about.html" class="nav-link">About</a></li>
-            <li><a href="projects.html" class="nav-link">Projects</a></li>
-            <li><a href="volunteer.html" class="nav-link">Volunteer</a></li>
-            <li><a href="donate.html" class="nav-link">Donate</a></li>
-            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+            <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+            <li><a href="projects.html" class="nav-link" data-i18n="nav_projects">Projects</a></li>
+            <li><a href="volunteer.html" class="nav-link" data-i18n="nav_volunteer">Volunteer</a></li>
+            <li><a href="donate.html" class="nav-link" data-i18n="nav_donate">Donate</a></li>
+            <li><a href="gallery.html" class="nav-link" data-i18n="nav_gallery">Gallery</a></li>
+            <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+            <li>
+                <label class="sr-only" for="languageSwitcher-desktop">Language</label>
+                <select id="languageSwitcher-desktop" class="language-switcher">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="ta">தமிழ்</option>
+                    <option value="te">తెలుగు</option>
+                    <option value="ml">മലയാളം</option>
+                    <option value="kn">ಕನ್ನಡ</option>
+                    <option value="gu">ગુજરાતી</option>
+                </select>
+            </li>
         </ul>
     </div>
     <div id="mobile-menu" class="mobile-menu md:hidden">
         <ul class="px-4 pb-4 space-y-3 text-sm font-semibold uppercase tracking-wide">
-            <li><a href="index.html" class="nav-link block">Home</a></li>
-            <li><a href="about.html" class="nav-link block">About</a></li>
-            <li><a href="projects.html" class="nav-link block">Projects</a></li>
-            <li><a href="volunteer.html" class="nav-link block">Volunteer</a></li>
-            <li><a href="donate.html" class="nav-link block">Donate</a></li>
-            <li><a href="gallery.html" class="nav-link block">Gallery</a></li>
-            <li><a href="contact.html" class="nav-link block">Contact</a></li>
+            <li class="pt-2">
+                <label class="sr-only" for="languageSwitcher-mobile">Language</label>
+                <select id="languageSwitcher-mobile" class="language-switcher w-full">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="ta">தமிழ்</option>
+                    <option value="te">తెలుగు</option>
+                    <option value="ml">മലയാളം</option>
+                    <option value="kn">ಕನ್ನಡ</option>
+                    <option value="gu">ગુજરાતી</option>
+                </select>
+            </li>
+            <li><a href="index.html" class="nav-link block" data-i18n="nav_home">Home</a></li>
+            <li><a href="about.html" class="nav-link block" data-i18n="nav_about">About</a></li>
+            <li><a href="projects.html" class="nav-link block" data-i18n="nav_projects">Projects</a></li>
+            <li><a href="volunteer.html" class="nav-link block" data-i18n="nav_volunteer">Volunteer</a></li>
+            <li><a href="donate.html" class="nav-link block" data-i18n="nav_donate">Donate</a></li>
+            <li><a href="gallery.html" class="nav-link block" data-i18n="nav_gallery">Gallery</a></li>
+            <li><a href="contact.html" class="nav-link block" data-i18n="nav_contact">Contact</a></li>
         </ul>
     </div>
 </nav>
 
     <!-- Hero Section -->
     <section class="hero-gradient py-16 relative hero-visual overflow-hidden">
-        <div class="absolute top-4 right-4 z-20">
-            <div class="translate-toggle">
-                <button id="translate-toggle" type="button" class="translate-label" aria-expanded="false" aria-controls="google-translate-panel">
-                    Language ▾
-                </button>
-                <div id="google-translate-panel" class="translate-panel" hidden>
-                    <div id="google_translate_element" class="translate-widget"></div>
-                </div>
-            </div>
-        </div>
         <div class="hero-shape shape-a" aria-hidden="true"></div>
         <div class="hero-shape shape-b" aria-hidden="true"></div>
         <div class="hero-shape shape-c" aria-hidden="true"></div>
         <div class="container mx-auto px-4 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                 <div class="fade-up" data-animate="fade-up">
-                    <p class="text-sm uppercase tracking-widest text-green-700 mb-3">Protecting
+                    <p class="text-sm uppercase tracking-widest text-green-700 mb-3" data-i18n="hero_tagline">Protecting
                         ecosystems together</p>
-                    <h1 class="text-5xl md:text-6xl font-bold mb-4 text-gray-900">Restoring
+                    <h1 class="text-5xl md:text-6xl font-bold mb-4 text-gray-900" data-i18n="hero_title">Restoring
                         Nature. Empowering
                         Communities.</h1>
-                    <p class="text-lg text-gray-700 mb-6">We partner with local leaders to revive
+                    <p class="text-lg text-gray-700 mb-6" data-i18n="hero_text">We partner with local leaders to revive
                         water bodies, expand
                         green cover, and inspire sustainable living.</p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="donate.html" class="btn-primary">Donate Now</a>
-                        <a href="volunteer.html" class="btn-secondary">Become a Volunteer</a>
+                        <a href="donate.html" class="btn-primary" data-i18n="cta_donate">Donate Now</a>
+                        <a href="volunteer.html" class="btn-secondary" data-i18n="cta_volunteer">Become a Volunteer</a>
                     </div>
                 </div>
                 <div class="flex justify-center lg:justify-end fade-up" data-animate="fade-up">
@@ -92,7 +106,7 @@
     <!-- Impact Stats -->
     <section id="impact" class="py-16 bg-green-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Our Impact</h2>
+            <h2 class="text-3xl font-bold text-center mb-12" data-i18n="impact_heading">Our Impact</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="text-center bg-white rounded-2xl p-6 lift-card">
                     <div
@@ -103,7 +117,7 @@
                         </svg>
                     </div>
                     <div class="text-4xl font-bold text-green-700 stat-number" data-target="25" data-suffix="+">0</div>
-                    <p class="text-lg text-gray-700">Lakes Restored</p>
+                    <p class="text-lg text-gray-700" data-i18n="impact_lakes">Lakes Restored</p>
                 </div>
                 <div class="text-center bg-white rounded-2xl p-6 lift-card">
                     <div
@@ -114,7 +128,7 @@
                         </svg>
                     </div>
                     <div class="text-4xl font-bold text-green-700 stat-number" data-target="120000">0</div>
-                    <p class="text-lg text-gray-700">Trees Planted</p>
+                    <p class="text-lg text-gray-700" data-i18n="impact_trees">Trees Planted</p>
                 </div>
                 <div class="text-center bg-white rounded-2xl p-6 lift-card">
                     <div
@@ -125,7 +139,7 @@
                         </svg>
                     </div>
                     <div class="text-4xl font-bold text-green-700 stat-number" data-target="350">0</div>
-                    <p class="text-lg text-gray-700">Volunteers</p>
+                    <p class="text-lg text-gray-700" data-i18n="impact_volunteers">Volunteers</p>
                 </div>
                 <div class="text-center bg-white rounded-2xl p-6 lift-card">
                     <div
@@ -136,7 +150,7 @@
                         </svg>
                     </div>
                     <div class="text-4xl font-bold text-green-700 stat-number" data-target="18">0</div>
-                    <p class="text-lg text-gray-700">Villages Impacted</p>
+                    <p class="text-lg text-gray-700" data-i18n="impact_villages">Villages Impacted</p>
                 </div>
             </div>
         </div>
@@ -145,7 +159,7 @@
     <!-- Core Initiatives -->
     <section class="py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Core Initiatives</h2>
+            <h2 class="text-3xl font-bold text-center mb-12" data-i18n="initiatives_heading">Core Initiatives</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="bg-white p-6 rounded-2xl text-center lift-card">
                     <div
@@ -155,8 +169,8 @@
                                 d="M12 3c3 4 6 6.5 6 10a6 6 0 01-12 0c0-3.5 3-6 6-10z" />
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Water Conservation</h3>
-                    <p class="text-gray-600">Protecting and restoring water resources for communities.</p>
+                    <h3 class="text-xl font-semibold mb-2" data-i18n="initiative_water_title">Water Conservation</h3>
+                    <p class="text-gray-600" data-i18n="initiative_water_text">Protecting and restoring water resources for communities.</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl text-center lift-card">
                     <div
@@ -166,8 +180,8 @@
                                 d="M12 3v3m0 0c-4.418 0-8 3.134-8 7 0 3.866 3.582 7 8 7s8-3.134 8-7c0-3.866-3.582-7-8-7zm0 0c1.657 0 3 1.343 3 3" />
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Tree Plantation</h3>
-                    <p class="text-gray-600">Planting trees to combat climate change and improve air quality.</p>
+                    <h3 class="text-xl font-semibold mb-2" data-i18n="initiative_tree_title">Tree Plantation</h3>
+                    <p class="text-gray-600" data-i18n="initiative_tree_text">Planting trees to combat climate change and improve air quality.</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl text-center lift-card">
                     <div
@@ -177,8 +191,8 @@
                                 d="M3 3h6l3 6H6l-3-6zm0 18h6l3-6H6l-3 6zm12 0h6l-3-6h-6l3 6zm0-18h6l-3 6h-6l3-6z" />
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Waste Management</h3>
-                    <p class="text-gray-600">Promoting sustainable waste practices and recycling.</p>
+                    <h3 class="text-xl font-semibold mb-2" data-i18n="initiative_waste_title">Waste Management</h3>
+                    <p class="text-gray-600" data-i18n="initiative_waste_text">Promoting sustainable waste practices and recycling.</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl text-center lift-card">
                     <div
@@ -188,8 +202,8 @@
                                 d="M8 10h8m-8 4h6m-2-9h3a2 2 0 012 2v11a2 2 0 01-2 2H7a2 2 0 01-2-2V7a2 2 0 012-2h3m2-2h-4a1 1 0 00-1 1v1h6V4a1 1 0 00-1-1z" />
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Community Awareness</h3>
-                    <p class="text-gray-600">Educating communities on environmental issues.</p>
+                    <h3 class="text-xl font-semibold mb-2" data-i18n="initiative_community_title">Community Awareness</h3>
+                    <p class="text-gray-600" data-i18n="initiative_community_text">Educating communities on environmental issues.</p>
                 </div>
             </div>
         </div>
@@ -198,16 +212,16 @@
     <!-- Featured Projects -->
     <section class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+            <h2 class="text-3xl font-bold text-center mb-12" data-i18n="featured_projects_heading">Featured Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="project-card bg-white rounded-2xl overflow-hidden lift-card">
                     <img loading="lazy" src="https://source.unsplash.com/random/400x300/?project1" alt="Urban greening project"
                         class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Urban Greening Initiative</h3>
-                        <p class="text-gray-600 mb-4">Transforming city spaces with sustainable green solutions.</p>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="project_urban_title">Urban Greening Initiative</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="project_urban_text">Transforming city spaces with sustainable green solutions.</p>
                         <a href="projects.html"
-                            class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700">Learn
+                            class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700" data-i18n="learn_more">Learn
                             More</a>
                     </div>
                 </div>
@@ -215,10 +229,10 @@
                     <img loading="lazy" src="https://source.unsplash.com/random/400x300/?project2" alt="River restoration project"
                         class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">River Restoration Project</h3>
-                        <p class="text-gray-600 mb-4">Cleaning and restoring local waterways with volunteers.</p>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="project_river_title">River Restoration Project</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="project_river_text">Cleaning and restoring local waterways with volunteers.</p>
                         <a href="projects.html"
-                            class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700">Learn
+                            class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700" data-i18n="learn_more">Learn
                             More</a>
                     </div>
                 </div>
@@ -226,10 +240,10 @@
                     <img loading="lazy" src="https://source.unsplash.com/random/400x300/?project3" alt="Community recycling program"
                         class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Community Recycling Program</h3>
-                        <p class="text-gray-600 mb-4">Building lasting recycling habits in local neighborhoods.</p>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="project_recycle_title">Community Recycling Program</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="project_recycle_text">Building lasting recycling habits in local neighborhoods.</p>
                         <a href="projects.html"
-                            class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700">Learn
+                            class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700" data-i18n="learn_more">Learn
                             More</a>
                     </div>
                 </div>
@@ -246,11 +260,11 @@
                         alt="Volunteers restoring a lakeside community" class="w-full rounded-2xl shadow-sm">
                 </div>
                 <div class="fade-up" data-animate="fade-up">
-                    <h2 class="text-3xl font-bold mb-4">Impact Story: Reviving Kaveri Lake</h2>
-                    <p class="text-lg text-gray-600 mb-6">With the help of local residents and dedicated volunteers, we
+                    <h2 class="text-3xl font-bold mb-4" data-i18n="impact_story_title">Impact Story: Reviving Kaveri Lake</h2>
+                    <p class="text-lg text-gray-600 mb-6" data-i18n="impact_story_text">With the help of local residents and dedicated volunteers, we
                         restored the Kaveri Lake shoreline, improved water quality, and created a safe habitat for
                         native birds. The community now hosts monthly clean-up drives and eco-education walks.</p>
-                    <a href="about.html" class="btn-secondary">Read More</a>
+                    <a href="about.html" class="btn-secondary" data-i18n="impact_story_button">Read More</a>
                 </div>
             </div>
         </div>
@@ -259,19 +273,19 @@
     <!-- Current Campaigns -->
     <section class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 fade-up" data-animate="fade-up">Current Campaigns</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 fade-up" data-animate="fade-up" data-i18n="campaigns_heading">Current Campaigns</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-2xl overflow-hidden lift-card fade-up" data-animate="fade-up">
                     <img loading="lazy" src="https://source.unsplash.com/random/500x360/?tree,planting"
                         alt="Tree plantation drive" class="w-full h-44 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Tree Plantation Drive</h3>
-                        <p class="text-gray-600 mb-4">Planting native saplings across urban corridors and schools.</p>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="campaign_tree_title">Tree Plantation Drive</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="campaign_tree_text">Planting native saplings across urban corridors and schools.</p>
                         <div class="w-full h-2 bg-gray-200 rounded-full mb-4">
                             <div class="h-2 bg-green-600 rounded-full" style="width: 65%;"></div>
                         </div>
                         <a href="donate.html"
-                            class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700">Support
+                            class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700" data-i18n="campaign_support">Support
                             Campaign</a>
                     </div>
                 </div>
@@ -279,13 +293,13 @@
                     <img loading="lazy" src="https://source.unsplash.com/random/500x360/?lake,restoration"
                         alt="Lake restoration project" class="w-full h-44 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Lake Restoration</h3>
-                        <p class="text-gray-600 mb-4">Reviving water bodies with community cleanups and monitoring.</p>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="campaign_lake_title">Lake Restoration</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="campaign_lake_text">Reviving water bodies with community cleanups and monitoring.</p>
                         <div class="w-full h-2 bg-gray-200 rounded-full mb-4">
                             <div class="h-2 bg-green-600 rounded-full" style="width: 48%;"></div>
                         </div>
                         <a href="donate.html"
-                            class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700">Support
+                            class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700" data-i18n="campaign_support">Support
                             Campaign</a>
                     </div>
                 </div>
@@ -293,13 +307,13 @@
                     <img loading="lazy" src="https://source.unsplash.com/random/500x360/?village,water"
                         alt="Village water program" class="w-full h-44 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Village Water Program</h3>
-                        <p class="text-gray-600 mb-4">Improving access to clean water through community filtration.</p>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="campaign_village_title">Village Water Program</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="campaign_village_text">Improving access to clean water through community filtration.</p>
                         <div class="w-full h-2 bg-gray-200 rounded-full mb-4">
                             <div class="h-2 bg-green-600 rounded-full" style="width: 72%;"></div>
                         </div>
                         <a href="donate.html"
-                            class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700">Support
+                            class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700" data-i18n="campaign_support">Support
                             Campaign</a>
                     </div>
                 </div>
@@ -319,10 +333,10 @@
                     <span class="map-marker" style="top: 28%; left: 68%;"></span>
                 </div>
                 <div class="fade-up" data-animate="fade-up">
-                    <h2 class="text-3xl font-bold mb-4">Impact Across Regions</h2>
-                    <p class="text-lg text-gray-600 mb-6">Our projects span lakes, villages, and urban neighborhoods.
+                    <h2 class="text-3xl font-bold mb-4" data-i18n="map_heading">Impact Across Regions</h2>
+                    <p class="text-lg text-gray-600 mb-6" data-i18n="map_text">Our projects span lakes, villages, and urban neighborhoods.
                         Each marker highlights a community-led restoration initiative.</p>
-                    <a href="projects.html" class="btn-secondary">Explore Projects</a>
+                    <a href="projects.html" class="btn-secondary" data-i18n="explore_projects">Explore Projects</a>
                 </div>
             </div>
         </div>
@@ -331,7 +345,7 @@
     <!-- Partner Logos -->
     <section class="py-16 bg-green-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-10">Our Partners</h2>
+            <h2 class="text-3xl font-bold text-center mb-10" data-i18n="partners_heading">Our Partners</h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 items-center">
                 <img loading="lazy" src="https://dummyimage.com/180x90/ffffff/15803d&text=Eco+Corp" alt="Eco Corp logo"
                     class="mx-auto rounded-xl shadow-sm partner-logo">
@@ -354,35 +368,35 @@
         style="background-image: url('https://source.unsplash.com/random/1600x900/?forest,water');">
         <div class="absolute inset-0 bg-black bg-opacity-60"></div>
         <div class="container mx-auto px-4 relative text-center text-white">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Together We Can Restore Nature</h2>
-            <p class="text-lg mb-6">Every action counts. Join hands with us to revive ecosystems and empower
+            <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="parallax_heading">Together We Can Restore Nature</h2>
+            <p class="text-lg mb-6" data-i18n="parallax_text">Every action counts. Join hands with us to revive ecosystems and empower
                 communities.</p>
-            <a href="volunteer.html" class="btn-primary">Join the Movement</a>
+            <a href="volunteer.html" class="btn-primary" data-i18n="parallax_button">Join the Movement</a>
         </div>
     </section>
 
     <!-- Testimonials -->
     <section class="py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Voices From the Field</h2>
+            <h2 class="text-3xl font-bold text-center mb-12" data-i18n="testimonials_heading">Voices From the Field</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-2xl shadow-sm p-6 lift-card">
-                    <p class="text-gray-600 mb-4">“Volunteering with ABC Foundation helped me see how small actions can
+                    <p class="text-gray-600 mb-4" data-i18n="testimonial_1_quote">“Volunteering with ABC Foundation helped me see how small actions can
                         rebuild entire ecosystems.”</p>
-                    <p class="font-semibold">Aisha Verma</p>
-                    <p class="text-sm text-gray-500">Volunteer Lead</p>
+                    <p class="font-semibold" data-i18n="testimonial_1_name">Aisha Verma</p>
+                    <p class="text-sm text-gray-500" data-i18n="testimonial_1_role">Volunteer Lead</p>
                 </div>
                 <div class="bg-white rounded-2xl shadow-sm p-6 lift-card">
-                    <p class="text-gray-600 mb-4">“The lake restoration program has brought back wildlife and pride to
+                    <p class="text-gray-600 mb-4" data-i18n="testimonial_2_quote">“The lake restoration program has brought back wildlife and pride to
                         our village.”</p>
-                    <p class="font-semibold">Ravi Kumar</p>
-                    <p class="text-sm text-gray-500">Community Partner</p>
+                    <p class="font-semibold" data-i18n="testimonial_2_name">Ravi Kumar</p>
+                    <p class="text-sm text-gray-500" data-i18n="testimonial_2_role">Community Partner</p>
                 </div>
                 <div class="bg-white rounded-2xl shadow-sm p-6 lift-card">
-                    <p class="text-gray-600 mb-4">“Their workshops inspired our school to start a recycling and
+                    <p class="text-gray-600 mb-4" data-i18n="testimonial_3_quote">“Their workshops inspired our school to start a recycling and
                         composting drive.”</p>
-                    <p class="font-semibold">Meera Iyer</p>
-                    <p class="text-sm text-gray-500">Teacher & Beneficiary</p>
+                    <p class="font-semibold" data-i18n="testimonial_3_name">Meera Iyer</p>
+                    <p class="text-sm text-gray-500" data-i18n="testimonial_3_role">Teacher & Beneficiary</p>
                 </div>
             </div>
         </div>
@@ -391,21 +405,21 @@
     <!-- Upcoming Campaigns -->
     <section class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Upcoming Campaigns</h2>
+            <h2 class="text-3xl font-bold text-center mb-12" data-i18n="upcoming_heading">Upcoming Campaigns</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-2xl shadow-sm p-6 lift-card">
-                    <h3 class="text-xl font-semibold mb-2">Tree Plantation Drive</h3>
-                    <p class="text-gray-600 mb-4">Join us to plant native saplings across urban parks.</p>
+                    <h3 class="text-xl font-semibold mb-2" data-i18n="upcoming_tree_title">Tree Plantation Drive</h3>
+                    <p class="text-gray-600 mb-4" data-i18n="upcoming_tree_text">Join us to plant native saplings across urban parks.</p>
                     <p class="text-sm text-gray-500">April 20, 2026</p>
                 </div>
                 <div class="bg-white rounded-2xl shadow-sm p-6 lift-card">
-                    <h3 class="text-xl font-semibold mb-2">Lake Cleanup Campaign</h3>
-                    <p class="text-gray-600 mb-4">A community cleanup initiative to protect local water bodies.</p>
+                    <h3 class="text-xl font-semibold mb-2" data-i18n="upcoming_lake_title">Lake Cleanup Campaign</h3>
+                    <p class="text-gray-600 mb-4" data-i18n="upcoming_lake_text">A community cleanup initiative to protect local water bodies.</p>
                     <p class="text-sm text-gray-500">May 8, 2026</p>
                 </div>
                 <div class="bg-white rounded-2xl shadow-sm p-6 lift-card">
-                    <h3 class="text-xl font-semibold mb-2">Environmental Awareness Program</h3>
-                    <p class="text-gray-600 mb-4">Interactive sessions and workshops for schools and colleges.</p>
+                    <h3 class="text-xl font-semibold mb-2" data-i18n="upcoming_awareness_title">Environmental Awareness Program</h3>
+                    <p class="text-gray-600 mb-4" data-i18n="upcoming_awareness_text">Interactive sessions and workshops for schools and colleges.</p>
                     <p class="text-sm text-gray-500">June 12, 2026</p>
                 </div>
             </div>
@@ -416,8 +430,8 @@
     <section class="py-16">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12 fade-up" data-animate="fade-up">
-                <h2 class="text-3xl font-bold mb-4">Volunteer Experience</h2>
-                <p class="text-lg text-gray-600">Grow your impact while gaining meaningful skills and connections.</p>
+                <h2 class="text-3xl font-bold mb-4" data-i18n="volunteer_heading">Volunteer Experience</h2>
+                <p class="text-lg text-gray-600" data-i18n="volunteer_text">Grow your impact while gaining meaningful skills and connections.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-2xl p-6 text-center lift-card fade-up" data-animate="fade-up">
@@ -427,8 +441,8 @@
                                 d="M12 3v3m0 0c-4.418 0-8 3.134-8 7 0 3.866 3.582 7 8 7s8-3.134 8-7c0-3.866-3.582-7-8-7z" />
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Environmental Impact</h3>
-                    <p class="text-gray-600">Contribute directly to restoration and conservation efforts.</p>
+                    <h3 class="text-xl font-semibold mb-2" data-i18n="volunteer_benefit_1_title">Environmental Impact</h3>
+                    <p class="text-gray-600" data-i18n="volunteer_benefit_1_text">Contribute directly to restoration and conservation efforts.</p>
                 </div>
                 <div class="bg-white rounded-2xl p-6 text-center lift-card fade-up" data-animate="fade-up">
                     <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-green-100 text-green-600 mb-4">
@@ -437,8 +451,8 @@
                                 d="M17 20h5v-1a4 4 0 00-4-4h-1m-4 5H2v-1a4 4 0 014-4h4m3-4a3 3 0 100-6 3 3 0 000 6zm-6 0a3 3 0 100-6 3 3 0 000 6" />
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Community Engagement</h3>
-                    <p class="text-gray-600">Work alongside local leaders and inspiring volunteers.</p>
+                    <h3 class="text-xl font-semibold mb-2" data-i18n="volunteer_benefit_2_title">Community Engagement</h3>
+                    <p class="text-gray-600" data-i18n="volunteer_benefit_2_text">Work alongside local leaders and inspiring volunteers.</p>
                 </div>
                 <div class="bg-white rounded-2xl p-6 text-center lift-card fade-up" data-animate="fade-up">
                     <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-green-100 text-green-600 mb-4">
@@ -447,12 +461,12 @@
                                 d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z" />
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Skill Development</h3>
-                    <p class="text-gray-600">Build leadership, coordination, and sustainability skills.</p>
+                    <h3 class="text-xl font-semibold mb-2" data-i18n="volunteer_benefit_3_title">Skill Development</h3>
+                    <p class="text-gray-600" data-i18n="volunteer_benefit_3_text">Build leadership, coordination, and sustainability skills.</p>
                 </div>
             </div>
             <div class="text-center mt-10 fade-up" data-animate="fade-up">
-                <a href="volunteer.html" class="btn-primary">Join as Volunteer</a>
+                <a href="volunteer.html" class="btn-primary" data-i18n="volunteer_cta">Join as Volunteer</a>
             </div>
         </div>
     </section>
@@ -460,7 +474,7 @@
     <!-- Donor Trust -->
     <section class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 fade-up" data-animate="fade-up">Donor Trust & Transparency</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 fade-up" data-animate="fade-up" data-i18n="donor_trust_heading">Donor Trust & Transparency</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-2xl p-6 lift-card fade-up" data-animate="fade-up">
                     <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-100 text-green-600 mb-4">
@@ -469,8 +483,8 @@
                                 d="M12 3l8 4v6c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V7l8-4z" />
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Registered NGO</h3>
-                    <p class="text-gray-600">Compliant with local regulations and audited annually.</p>
+                    <h3 class="text-xl font-semibold mb-2" data-i18n="donor_card_1_title">Registered NGO</h3>
+                    <p class="text-gray-600" data-i18n="donor_card_1_text">Compliant with local regulations and audited annually.</p>
                 </div>
                 <div class="bg-white rounded-2xl p-6 lift-card fade-up" data-animate="fade-up">
                     <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-100 text-green-600 mb-4">
@@ -479,8 +493,8 @@
                                 d="M12 8v8m4-4H8m11 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Transparent Funding</h3>
-                    <p class="text-gray-600">Clear allocation of funds toward projects and community support.</p>
+                    <h3 class="text-xl font-semibold mb-2" data-i18n="donor_card_2_title">Transparent Funding</h3>
+                    <p class="text-gray-600" data-i18n="donor_card_2_text">Clear allocation of funds toward projects and community support.</p>
                 </div>
                 <div class="bg-white rounded-2xl p-6 lift-card fade-up" data-animate="fade-up">
                     <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-100 text-green-600 mb-4">
@@ -489,8 +503,8 @@
                                 d="M9 12h6m-6 4h6m-3-12h3a2 2 0 012 2v11a2 2 0 01-2 2H7a2 2 0 01-2-2V7a2 2 0 012-2h3" />
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Annual Impact Reports</h3>
-                    <p class="text-gray-600">Detailed updates on project milestones and outcomes.</p>
+                    <h3 class="text-xl font-semibold mb-2" data-i18n="donor_card_3_title">Annual Impact Reports</h3>
+                    <p class="text-gray-600" data-i18n="donor_card_3_text">Detailed updates on project milestones and outcomes.</p>
                 </div>
             </div>
         </div>
@@ -499,53 +513,53 @@
     <!-- Volunteer CTA -->
     <section class="py-16 bg-green-700 text-white">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-4">Join Our Volunteer Team</h2>
-            <p class="text-xl mb-8">Make a difference in your community. Volunteer with us today!</p>
-            <a href="volunteer.html" class="btn-primary">Become a Volunteer</a>
+            <h2 class="text-3xl font-bold mb-4" data-i18n="volunteer_cta_heading">Join Our Volunteer Team</h2>
+            <p class="text-xl mb-8" data-i18n="volunteer_cta_text">Make a difference in your community. Volunteer with us today!</p>
+            <a href="volunteer.html" class="btn-primary" data-i18n="cta_volunteer">Become a Volunteer</a>
         </div>
     </section>
 
     <!-- Donation CTA -->
     <section class="py-16 bg-gray-100">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-4">Your Donations Make a Difference</h2>
-            <p class="text-xl mb-8">Every contribution helps us protect the environment and build a sustainable future.
+            <h2 class="text-3xl font-bold mb-4" data-i18n="donation_cta_heading">Your Donations Make a Difference</h2>
+            <p class="text-xl mb-8" data-i18n="donation_cta_text">Every contribution helps us protect the environment and build a sustainable future.
             </p>
-            <a href="donate.html" class="btn-primary">Donate Now</a>
+            <a href="donate.html" class="btn-primary" data-i18n="cta_donate">Donate Now</a>
         </div>
     </section>
 
     <!-- Latest Updates -->
     <section class="py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Latest Updates</h2>
+            <h2 class="text-3xl font-bold text-center mb-12" data-i18n="latest_updates_heading">Latest Updates</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-2xl overflow-hidden lift-card">
                     <img loading="lazy" src="https://source.unsplash.com/random/400x300/?news1" alt="New partnership announcement"
                         class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">New Partnership Announced</h3>
-                        <p class="text-gray-600 mb-4">Collaborating with local leaders for stronger environmental
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="update_1_title">New Partnership Announced</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="update_1_text">Collaborating with local leaders for stronger environmental
                             initiatives.</p>
-                        <a href="#" class="text-green-700 font-semibold hover:text-green-800">Read more</a>
+                        <a href="#" class="text-green-700 font-semibold hover:text-green-800" data-i18n="read_more">Read more</a>
                     </div>
                 </div>
                 <div class="bg-white rounded-2xl overflow-hidden lift-card">
                     <img loading="lazy" src="https://source.unsplash.com/random/400x300/?news2" alt="Volunteer success story"
                         class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Volunteer Success Story</h3>
-                        <p class="text-gray-600 mb-4">How one volunteer's dedication created a lasting impact.</p>
-                        <a href="#" class="text-green-700 font-semibold hover:text-green-800">Read more</a>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="update_2_title">Volunteer Success Story</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="update_2_text">How one volunteer's dedication created a lasting impact.</p>
+                        <a href="#" class="text-green-700 font-semibold hover:text-green-800" data-i18n="read_more">Read more</a>
                     </div>
                 </div>
                 <div class="bg-white rounded-2xl overflow-hidden lift-card">
                     <img loading="lazy" src="https://source.unsplash.com/random/400x300/?news3" alt="Community event announcement"
                         class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Upcoming Events</h3>
-                        <p class="text-gray-600 mb-4">Join us for our next community clean-up event.</p>
-                        <a href="#" class="text-green-700 font-semibold hover:text-green-800">Read more</a>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="update_3_title">Upcoming Events</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="update_3_text">Join us for our next community clean-up event.</p>
+                        <a href="#" class="text-green-700 font-semibold hover:text-green-800" data-i18n="read_more">Read more</a>
                     </div>
                 </div>
             </div>
@@ -556,15 +570,15 @@
     <section class="py-16 bg-green-50">
         <div class="container mx-auto px-4">
             <div class="max-w-3xl mx-auto text-center fade-up" data-animate="fade-up">
-                <h2 class="text-3xl font-bold mb-4">Stay Connected</h2>
-                <p class="text-lg text-gray-600 mb-6">Get monthly impact stories, campaign updates, and volunteer
+                <h2 class="text-3xl font-bold mb-4" data-i18n="newsletter_heading">Stay Connected</h2>
+                <p class="text-lg text-gray-600 mb-6" data-i18n="newsletter_text">Get monthly impact stories, campaign updates, and volunteer
                     opportunities.</p>
                 <form class="flex flex-col sm:flex-row gap-4 justify-center" data-demo="true">
                     <label for="newsletter-email" class="sr-only">Email address</label>
                     <input type="email" id="newsletter-email" name="newsletter-email"
                         class="w-full sm:w-2/3 px-4 py-3 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-500"
                         placeholder="Enter your email" required>
-                    <button type="submit" class="btn-primary">Subscribe</button>
+                    <button type="submit" class="btn-primary" data-i18n="newsletter_button">Subscribe</button>
                 </form>
             </div>
         </div>
@@ -575,8 +589,8 @@
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
             <div>
-                <h3 class="text-lg font-semibold mb-4">About ABC Foundation</h3>
-                <p class="text-gray-300">We are a community-driven NGO restoring ecosystems, empowering local
+                <h3 class="text-lg font-semibold mb-4" data-i18n="footer_about_heading">About ABC Foundation</h3>
+                <p class="text-gray-300" data-i18n="footer_about_text">We are a community-driven NGO restoring ecosystems, empowering local
                     volunteers, and building resilient green spaces for future generations.</p>
                 <div class="flex items-center space-x-4 mt-4">
                     <a href="#" class="hover:text-green-300" aria-label="Facebook">
@@ -600,31 +614,31 @@
                 </div>
             </div>
             <div>
-                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                <h3 class="text-lg font-semibold mb-4" data-i18n="footer_links_heading">Quick Links</h3>
                 <ul class="space-y-2">
-                    <li><a href="about.html" class="hover:text-green-300">About</a></li>
-                    <li><a href="projects.html" class="hover:text-green-300">Projects</a></li>
-                    <li><a href="volunteer.html" class="hover:text-green-300">Volunteer</a></li>
-                    <li><a href="donate.html" class="hover:text-green-300">Donate</a></li>
-                    <li><a href="gallery.html" class="hover:text-green-300">Gallery</a></li>
-                    <li><a href="contact.html" class="hover:text-green-300">Contact</a></li>
+                    <li><a href="about.html" class="hover:text-green-300" data-i18n="nav_about">About</a></li>
+                    <li><a href="projects.html" class="hover:text-green-300" data-i18n="nav_projects">Projects</a></li>
+                    <li><a href="volunteer.html" class="hover:text-green-300" data-i18n="nav_volunteer">Volunteer</a></li>
+                    <li><a href="donate.html" class="hover:text-green-300" data-i18n="nav_donate">Donate</a></li>
+                    <li><a href="gallery.html" class="hover:text-green-300" data-i18n="nav_gallery">Gallery</a></li>
+                    <li><a href="contact.html" class="hover:text-green-300" data-i18n="nav_contact">Contact</a></li>
                 </ul>
             </div>
         
             <div>
-                <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
-                <p class="text-gray-300">123 Green Street, Eco City</p>
-                <p class="text-gray-300">Phone: (123) 456-7890</p>
-                <p class="text-gray-300">Email: info@abc-foundation.org</p>
+                <h3 class="text-lg font-semibold mb-4" data-i18n="footer_contact_heading">Contact Info</h3>
+                <p class="text-gray-300" data-i18n="footer_contact_address">123 Green Street, Eco City</p>
+                <p class="text-gray-300" data-i18n="footer_contact_phone">Phone: (123) 456-7890</p>
+                <p class="text-gray-300" data-i18n="footer_contact_email">Email: info@abc-foundation.org</p>
             </div>
             <div>
-                <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
-                <p class="text-gray-300 mb-4">Get impact stories and campaign updates.</p>
+                <h3 class="text-lg font-semibold mb-4" data-i18n="newsletter_heading">Newsletter</h3>
+                <p class="text-gray-300 mb-4" data-i18n="newsletter_text">Get impact stories and campaign updates.</p>
                 <form class="flex flex-col gap-3" data-demo="true">
                     <label for="footer-email" class="sr-only">Email address</label>
                     <input type="email" id="footer-email" name="footer-email"
                         class="w-full px-4 py-2 rounded-full text-gray-900" placeholder="Email address" required>
-                    <button type="submit" class="btn-primary text-sm">Subscribe</button>
+                    <button type="submit" class="btn-primary text-sm" data-i18n="newsletter_button">Subscribe</button>
                 </form>
             </div>
         </div>
@@ -657,17 +671,8 @@
 
 
 
+    <script src="assets/js/i18n.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'en,hi,bn,ta,te,mr,ml,kn,gu',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-        }
-    </script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>

@@ -20,7 +20,7 @@
     <!-- Navbar -->
     <nav class="bg-green-700 text-white sticky top-0 z-50">
     <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-        <a href="index.html" class="text-2xl font-bold tracking-wide">ABC Foundation</a>
+        <a href="index.html" class="text-2xl font-bold tracking-wide" data-i18n="site_name">ABC Foundation</a>
         <button id="hamburger" class="md:hidden focus:outline-none" aria-label="Toggle navigation" aria-expanded="false"
             aria-controls="mobile-menu">
             <span class="hamburger-line"></span>
@@ -28,24 +28,48 @@
             <span class="hamburger-line"></span>
         </button>
         <ul class="hidden md:flex items-center space-x-6 text-sm font-semibold uppercase tracking-wide">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="about.html" class="nav-link">About</a></li>
-            <li><a href="projects.html" class="nav-link">Projects</a></li>
-            <li><a href="volunteer.html" class="nav-link">Volunteer</a></li>
-            <li><a href="donate.html" class="nav-link">Donate</a></li>
-            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+            <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+            <li><a href="projects.html" class="nav-link" data-i18n="nav_projects">Projects</a></li>
+            <li><a href="volunteer.html" class="nav-link" data-i18n="nav_volunteer">Volunteer</a></li>
+            <li><a href="donate.html" class="nav-link" data-i18n="nav_donate">Donate</a></li>
+            <li><a href="gallery.html" class="nav-link" data-i18n="nav_gallery">Gallery</a></li>
+            <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+            <li>
+                <label class="sr-only" for="languageSwitcher-desktop">Language</label>
+                <select id="languageSwitcher-desktop" class="language-switcher">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="ta">தமிழ்</option>
+                    <option value="te">తెలుగు</option>
+                    <option value="ml">മലയാളം</option>
+                    <option value="kn">ಕನ್ನಡ</option>
+                    <option value="gu">ગુજરાતી</option>
+                </select>
+            </li>
         </ul>
     </div>
     <div id="mobile-menu" class="mobile-menu md:hidden">
         <ul class="px-4 pb-4 space-y-3 text-sm font-semibold uppercase tracking-wide">
-            <li><a href="index.html" class="nav-link block">Home</a></li>
-            <li><a href="about.html" class="nav-link block">About</a></li>
-            <li><a href="projects.html" class="nav-link block">Projects</a></li>
-            <li><a href="volunteer.html" class="nav-link block">Volunteer</a></li>
-            <li><a href="donate.html" class="nav-link block">Donate</a></li>
-            <li><a href="gallery.html" class="nav-link block">Gallery</a></li>
-            <li><a href="contact.html" class="nav-link block">Contact</a></li>
+            <li class="pt-2">
+                <label class="sr-only" for="languageSwitcher-mobile">Language</label>
+                <select id="languageSwitcher-mobile" class="language-switcher w-full">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="ta">தமிழ்</option>
+                    <option value="te">తెలుగు</option>
+                    <option value="ml">മലയാളം</option>
+                    <option value="kn">ಕನ್ನಡ</option>
+                    <option value="gu">ગુજરાતી</option>
+                </select>
+            </li>
+            <li><a href="index.html" class="nav-link block" data-i18n="nav_home">Home</a></li>
+            <li><a href="about.html" class="nav-link block" data-i18n="nav_about">About</a></li>
+            <li><a href="projects.html" class="nav-link block" data-i18n="nav_projects">Projects</a></li>
+            <li><a href="volunteer.html" class="nav-link block" data-i18n="nav_volunteer">Volunteer</a></li>
+            <li><a href="donate.html" class="nav-link block" data-i18n="nav_donate">Donate</a></li>
+            <li><a href="gallery.html" class="nav-link block" data-i18n="nav_gallery">Gallery</a></li>
+            <li><a href="contact.html" class="nav-link block" data-i18n="nav_contact">Contact</a></li>
         </ul>
     </div>
 </nav>
@@ -54,23 +78,23 @@
     <section class="py-16">
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto text-center mb-12">
-                <h1 class="text-4xl font-bold mb-4">Support Our Cause</h1>
+                <h1 class="text-4xl font-bold mb-4" data-i18n="donate_heading">Support Our Cause</h1>
                 <p class="text-lg text-gray-600">Your generosity helps us continue our vital work in protecting the
                     environment. Every donation, no matter the size, makes a real difference.</p>
             </div>
             <div class="max-w-4xl mx-auto bg-green-50 rounded-2xl p-8 mb-10">
-                <h2 class="text-2xl font-semibold mb-3">How Your Donation Creates Impact</h2>
+                <h2 class="text-2xl font-semibold mb-3" data-i18n="donate_impact_heading">How Your Donation Creates Impact</h2>
                 <p class="text-gray-700 mb-4">Your support funds community-led restoration projects, eco-education
                     workshops, and sustainable infrastructure upgrades. Together, we restore lakes, plant trees, and
                     empower volunteers to protect local ecosystems.</p>
                 <ul class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-gray-700 text-sm">
-                    <li class="bg-white rounded-xl p-4 shadow-sm">₹500 → Plants 5 trees.</li>
-                    <li class="bg-white rounded-xl p-4 shadow-sm">₹1000 → Supports water restoration.</li>
-                    <li class="bg-white rounded-xl p-4 shadow-sm">₹5000 → Funds a plantation drive.</li>
+                    <li class="bg-white rounded-xl p-4 shadow-sm" data-i18n="donate_impact_item_1">₹500 → Plants 5 trees.</li>
+                    <li class="bg-white rounded-xl p-4 shadow-sm" data-i18n="donate_impact_item_2">₹1000 → Supports water restoration.</li>
+                    <li class="bg-white rounded-xl p-4 shadow-sm" data-i18n="donate_impact_item_3">₹5000 → Funds a plantation drive.</li>
                 </ul>
             </div>
             <form class="bg-white rounded-2xl shadow-sm p-8 max-w-4xl mx-auto" data-demo="true">
-                <h2 class="text-2xl font-semibold mb-4">Choose a Donation Amount</h2>
+                <h2 class="text-2xl font-semibold mb-4" data-i18n="donate_amount_heading">Choose a Donation Amount</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-6">
                     <button type="button"
                         class="donation-option border border-gray-200 rounded-2xl px-4 py-5 text-center font-semibold text-gray-700 hover:border-green-500"
@@ -89,7 +113,7 @@
                         data-amount="custom">Custom</button>
                 </div>
                 <div class="mb-8">
-                    <label for="custom-amount" class="block text-gray-700 font-semibold mb-2">Custom Amount</label>
+                    <label for="custom-amount" class="block text-gray-700 font-semibold mb-2" data-i18n="donate_custom_label">Custom Amount</label>
                     <input type="number" id="custom-amount" name="custom-amount"
                         class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                         placeholder="Enter custom amount" min="1">
@@ -125,7 +149,7 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="btn-primary w-full">Donate Now</button>
+                <button type="submit" class="btn-primary w-full" data-i18n="cta_donate">Donate Now</button>
             </form>
         </div>
     </section>
@@ -217,6 +241,7 @@
 
 
 
+    <script src="assets/js/i18n.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 

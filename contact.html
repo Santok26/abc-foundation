@@ -20,7 +20,7 @@
     <!-- Navbar -->
     <nav class="bg-green-700 text-white sticky top-0 z-50">
     <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-        <a href="index.html" class="text-2xl font-bold tracking-wide">ABC Foundation</a>
+        <a href="index.html" class="text-2xl font-bold tracking-wide" data-i18n="site_name">ABC Foundation</a>
         <button id="hamburger" class="md:hidden focus:outline-none" aria-label="Toggle navigation" aria-expanded="false"
             aria-controls="mobile-menu">
             <span class="hamburger-line"></span>
@@ -28,24 +28,48 @@
             <span class="hamburger-line"></span>
         </button>
         <ul class="hidden md:flex items-center space-x-6 text-sm font-semibold uppercase tracking-wide">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="about.html" class="nav-link">About</a></li>
-            <li><a href="projects.html" class="nav-link">Projects</a></li>
-            <li><a href="volunteer.html" class="nav-link">Volunteer</a></li>
-            <li><a href="donate.html" class="nav-link">Donate</a></li>
-            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+            <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+            <li><a href="projects.html" class="nav-link" data-i18n="nav_projects">Projects</a></li>
+            <li><a href="volunteer.html" class="nav-link" data-i18n="nav_volunteer">Volunteer</a></li>
+            <li><a href="donate.html" class="nav-link" data-i18n="nav_donate">Donate</a></li>
+            <li><a href="gallery.html" class="nav-link" data-i18n="nav_gallery">Gallery</a></li>
+            <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+            <li>
+                <label class="sr-only" for="languageSwitcher-desktop">Language</label>
+                <select id="languageSwitcher-desktop" class="language-switcher">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="ta">தமிழ்</option>
+                    <option value="te">తెలుగు</option>
+                    <option value="ml">മലയാളം</option>
+                    <option value="kn">ಕನ್ನಡ</option>
+                    <option value="gu">ગુજરાતી</option>
+                </select>
+            </li>
         </ul>
     </div>
     <div id="mobile-menu" class="mobile-menu md:hidden">
         <ul class="px-4 pb-4 space-y-3 text-sm font-semibold uppercase tracking-wide">
-            <li><a href="index.html" class="nav-link block">Home</a></li>
-            <li><a href="about.html" class="nav-link block">About</a></li>
-            <li><a href="projects.html" class="nav-link block">Projects</a></li>
-            <li><a href="volunteer.html" class="nav-link block">Volunteer</a></li>
-            <li><a href="donate.html" class="nav-link block">Donate</a></li>
-            <li><a href="gallery.html" class="nav-link block">Gallery</a></li>
-            <li><a href="contact.html" class="nav-link block">Contact</a></li>
+            <li class="pt-2">
+                <label class="sr-only" for="languageSwitcher-mobile">Language</label>
+                <select id="languageSwitcher-mobile" class="language-switcher w-full">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="ta">தமிழ்</option>
+                    <option value="te">తెలుగు</option>
+                    <option value="ml">മലയാളം</option>
+                    <option value="kn">ಕನ್ನಡ</option>
+                    <option value="gu">ગુજરાતી</option>
+                </select>
+            </li>
+            <li><a href="index.html" class="nav-link block" data-i18n="nav_home">Home</a></li>
+            <li><a href="about.html" class="nav-link block" data-i18n="nav_about">About</a></li>
+            <li><a href="projects.html" class="nav-link block" data-i18n="nav_projects">Projects</a></li>
+            <li><a href="volunteer.html" class="nav-link block" data-i18n="nav_volunteer">Volunteer</a></li>
+            <li><a href="donate.html" class="nav-link block" data-i18n="nav_donate">Donate</a></li>
+            <li><a href="gallery.html" class="nav-link block" data-i18n="nav_gallery">Gallery</a></li>
+            <li><a href="contact.html" class="nav-link block" data-i18n="nav_contact">Contact</a></li>
         </ul>
     </div>
 </nav>
@@ -54,60 +78,60 @@
     <section class="py-16">
         <div class="container mx-auto px-4">
             <div class="max-w-3xl mx-auto text-center mb-12">
-                <h1 class="text-4xl font-bold mb-4">Contact Us</h1>
-                <p class="text-lg text-gray-600">Have questions about our work or want to get involved? We'd love to
+                <h1 class="text-4xl font-bold mb-4" data-i18n="contact_heading">Contact Us</h1>
+                <p class="text-lg text-gray-600" data-i18n="contact_subheading">Have questions about our work or want to get involved? We'd love to
                     hear from you.</p>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 <form class="bg-white rounded-2xl p-8" data-demo="true">
-                    <h2 class="text-2xl font-semibold mb-6">Send a Message</h2>
+                    <h2 class="text-2xl font-semibold mb-6" data-i18n="contact_form_heading">Send a Message</h2>
                     <div class="grid grid-cols-1 gap-5">
                         <div>
-                            <label for="contact-name" class="block text-gray-700 font-semibold mb-2">Name</label>
+                            <label for="contact-name" class="block text-gray-700 font-semibold mb-2" data-i18n="contact_label_name">Name</label>
                             <input type="text" id="contact-name" name="contact-name"
                                 class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                                 required>
                         </div>
                         <div>
-                            <label for="contact-email" class="block text-gray-700 font-semibold mb-2">Email</label>
+                            <label for="contact-email" class="block text-gray-700 font-semibold mb-2" data-i18n="contact_label_email">Email</label>
                             <input type="email" id="contact-email" name="contact-email"
                                 class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                                 required>
                         </div>
                         <div>
-                            <label for="contact-phone" class="block text-gray-700 font-semibold mb-2">Phone</label>
+                            <label for="contact-phone" class="block text-gray-700 font-semibold mb-2" data-i18n="contact_label_phone">Phone</label>
                             <input type="tel" id="contact-phone" name="contact-phone"
                                 class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
                         </div>
                         <div>
-                            <label for="contact-message" class="block text-gray-700 font-semibold mb-2">Message</label>
+                            <label for="contact-message" class="block text-gray-700 font-semibold mb-2" data-i18n="contact_label_message">Message</label>
                             <textarea id="contact-message" name="contact-message" rows="5"
                                 class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                                 required></textarea>
                         </div>
                     </div>
-                    <button type="submit" class="mt-6 btn-primary">Send Message</button>
+                    <button type="submit" class="mt-6 btn-primary" data-i18n="contact_button_send">Send Message</button>
                 </form>
                 <div class="bg-green-50 rounded-2xl p-8">
-                    <h2 class="text-2xl font-semibold mb-6">Contact Information</h2>
+                    <h2 class="text-2xl font-semibold mb-6" data-i18n="contact_info_heading">Contact Information</h2>
                     <div class="space-y-5 text-gray-700">
                         <div>
-                            <h3 class="text-lg font-semibold mb-1">Address</h3>
+                            <h3 class="text-lg font-semibold mb-1" data-i18n="contact_info_address_label">Address</h3>
                             <p>123 Green Street<br>Eco City, EC 12345<br>United States</p>
                         </div>
                         <div>
-                            <h3 class="text-lg font-semibold mb-1">Phone</h3>
+                            <h3 class="text-lg font-semibold mb-1" data-i18n="contact_info_phone_label">Phone</h3>
                             <p>(123) 456-7890</p>
                         </div>
                         <div>
-                            <h3 class="text-lg font-semibold mb-1">Email</h3>
+                            <h3 class="text-lg font-semibold mb-1" data-i18n="contact_info_email_label">Email</h3>
                             <p>info@abc-foundation.org</p>
                         </div>
                         <div>
-                            <h3 class="text-lg font-semibold mb-3">Location</h3>
+                            <h3 class="text-lg font-semibold mb-3" data-i18n="contact_info_location_label">Location</h3>
                             <div class="bg-white border border-dashed border-green-200 h-56 rounded-2xl flex flex-col items-center justify-center text-center px-4">
-                                <p class="text-gray-500">Map Placeholder</p>
-                                <p class="text-sm text-gray-400">Add an embedded map when ready.</p>
+                                <p class="text-gray-500" data-i18n="contact_map_placeholder">Map Placeholder</p>
+                                <p class="text-sm text-gray-400" data-i18n="contact_map_note">Add an embedded map when ready.</p>
                             </div>
                         </div>
                     </div>
@@ -203,6 +227,7 @@
 
 
 
+    <script src="assets/js/i18n.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 
