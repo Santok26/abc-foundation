@@ -15,12 +15,14 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
     font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
     background: var(--slate-950);
     color: #e2e8f0;
+    overflow-x: hidden;
 }
 
 body.page-fade {
@@ -163,6 +165,7 @@ select:focus {
     line-height: 1.2;
     text-transform: none;
     transition: border-color 0.2s ease, background 0.2s ease;
+    max-width: 100%;
 }
 
 .language-switcher:focus-visible {
@@ -435,6 +438,10 @@ textarea::placeholder {
     border-radius: 9999px;
     font-weight: 600;
     transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    text-align: center;
 }
 
 .btn-primary:hover {
@@ -449,6 +456,10 @@ textarea::placeholder {
     border-radius: 9999px;
     font-weight: 600;
     transition: background-color 0.2s ease, color 0.2s ease;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    text-align: center;
 }
 
 .btn-secondary:hover {
@@ -477,6 +488,68 @@ textarea::placeholder {
 img {
     max-width: 100%;
     height: auto;
+}
+
+.container,
+.container * {
+    min-width: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button,
+label,
+option,
+select {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+@media (max-width: 767px) {
+    h1,
+    h2,
+    h3,
+    p,
+    a,
+    button,
+    label,
+    option,
+    select {
+        hyphens: auto;
+    }
+
+    .language-switcher {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .mobile-menu ul,
+    .mobile-menu li,
+    .mobile-menu a {
+        max-width: 100%;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .text-5xl,
+    .text-6xl,
+    .text-4xl,
+    .text-3xl,
+    .text-2xl,
+    .text-xl {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
 }
 
 @media print {
