@@ -72,93 +72,160 @@
     </div>
 </nav>
 
-    <!-- Projects Section -->
+    <section class="page-hero py-20">
+        <div class="container mx-auto px-4">
+            <div class="page-hero-grid">
+                <div>
+                    <span class="section-kicker">Project Portfolio</span>
+                    <h1 class="text-4xl md:text-5xl font-bold mt-5 mb-5">Programs designed for visible outcomes, not just campaign optics.</h1>
+                    <p class="text-lg text-gray-300 max-w-2xl">The strongest NGO project pages show scope, status, and proof of work. This prototype now frames the portfolio as an active pipeline with measurable categories and field-ready programs.</p>
+                    <div class="metrics-inline mt-8">
+                        <div class="metric-inline">
+                            <strong>06</strong>
+                            <span>Flagship programs currently highlighted</span>
+                        </div>
+                        <div class="metric-inline">
+                            <strong>03</strong>
+                            <span>Primary intervention areas across water, green cover, and waste</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-panel">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1200&q=80"
+                        alt="Field volunteers participating in an environmental restoration effort"
+                        class="w-full h-80 object-cover rounded-2xl mb-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="project-metric">
+                            <strong>65%</strong>
+                            <span>Typical campaign funding progress displayed to donors</span>
+                        </div>
+                        <div class="project-metric">
+                            <strong>Monthly</strong>
+                            <span>Field check-ins for partner communities and volunteer teams</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="py-16">
         <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto text-center mb-12">
-                <h1 class="text-4xl font-bold mb-4">Our Projects</h1>
-                <p class="text-lg text-gray-600">Explore the initiatives that are restoring ecosystems and building
-                    sustainable communities.</p>
-            </div>
-            <div class="mb-12">
-                <h2 class="text-2xl font-semibold mb-6">Project Categories</h2>
-                <div class="flex flex-wrap gap-3">
-                    <button class="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold">All</button>
-                    <button class="bg-white border border-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm">Water
-                        Conservation</button>
-                    <button class="bg-white border border-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm">Tree
-                        Plantation</button>
-                    <button class="bg-white border border-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm">Waste
-                        Management</button>
-                    <button class="bg-white border border-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm">Community
-                        Education</button>
+            <div class="section-panel mb-10">
+                <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+                    <div class="max-w-2xl">
+                        <span class="section-kicker">Portfolio Lens</span>
+                        <h2 class="text-3xl font-bold mt-5 mb-4">Each category should signal both purpose and execution maturity.</h2>
+                        <p class="text-lg text-gray-300">The chips below are styled as filters, but in a stronger build they can become actual interactive states. For now, they visually organize the portfolio and make the page feel more intentional.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="project-chip is-active">All Projects</span>
+                        <span class="project-chip">Water Restoration</span>
+                        <span class="project-chip">Urban Greening</span>
+                        <span class="project-chip">Waste Systems</span>
+                        <span class="project-chip">Community Education</span>
+                    </div>
                 </div>
             </div>
+
+            <div class="section-panel mb-10">
+                <div class="editorial-grid">
+                    <div>
+                        <span class="section-kicker">Featured Program</span>
+                        <h2 class="text-3xl font-bold mt-5 mb-4">Kaveri Lake Edge Recovery</h2>
+                        <p class="text-lg text-gray-300 mb-6">A multi-phase restoration effort focused on shoreline cleanup, native planting, runoff management, and neighborhood stewardship. This is the type of flagship program that should anchor donor confidence.</p>
+                        <div class="project-meta">
+                            <span class="project-status">Active Field Program</span>
+                            <span class="project-impact-pill">420 volunteers mobilized</span>
+                            <span class="project-impact-pill">8 cleanup cycles completed</span>
+                        </div>
+                        <a href="donate.html" class="btn-primary inline-flex">Support this program</a>
+                    </div>
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80"
+                        alt="Lakeside restoration project with community participation"
+                        class="w-full h-80 rounded-2xl object-cover">
+                </div>
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="project-card bg-white rounded-2xl overflow-hidden lift-card">
-                    <img loading="lazy" src="https://source.unsplash.com/random/400x300/?water" alt="Water conservation project"
+                <article class="project-card bg-white rounded-2xl overflow-hidden lift-card">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Water conservation project"
                         class="w-full h-48 object-cover">
                     <div class="p-6">
+                        <div class="project-meta">
+                            <span class="project-status">In Progress</span>
+                            <span class="project-impact-pill">12 sites</span>
+                        </div>
                         <h3 class="text-xl font-semibold mb-2">Urban Water Conservation</h3>
-                        <p class="text-gray-600 mb-4">Implementing rainwater harvesting systems in city buildings to
-                            reduce water waste.</p>
-                        <a href="#" class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700">Learn
-                            More</a>
+                        <p class="text-gray-600 mb-4">Deploying rainwater capture and neighborhood recharge systems in dense urban buildings and schools.</p>
+                        <a href="#" class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700">Learn More</a>
                     </div>
-                </div>
-                <div class="project-card bg-white rounded-2xl overflow-hidden lift-card">
-                    <img loading="lazy" src="https://source.unsplash.com/random/400x300/?trees" alt="Tree plantation project"
+                </article>
+                <article class="project-card bg-white rounded-2xl overflow-hidden lift-card">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80" alt="Tree plantation project"
                         class="w-full h-48 object-cover">
                     <div class="p-6">
+                        <div class="project-meta">
+                            <span class="project-status">Stewardship Phase</span>
+                            <span class="project-impact-pill">28,000 saplings</span>
+                        </div>
                         <h3 class="text-xl font-semibold mb-2">Community Forest Initiative</h3>
-                        <p class="text-gray-600 mb-4">Planting native trees in degraded urban areas to improve
-                            biodiversity.</p>
-                        <a href="#" class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700">Learn
-                            More</a>
+                        <p class="text-gray-600 mb-4">Restoring degraded urban edges with native tree belts and survival tracking beyond plantation day.</p>
+                        <a href="#" class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700">Learn More</a>
                     </div>
-                </div>
-                <div class="project-card bg-white rounded-2xl overflow-hidden lift-card">
-                    <img loading="lazy" src="https://source.unsplash.com/random/400x300/?recycle" alt="Waste management project"
+                </article>
+                <article class="project-card bg-white rounded-2xl overflow-hidden lift-card">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=900&q=80" alt="Waste management project"
                         class="w-full h-48 object-cover">
                     <div class="p-6">
+                        <div class="project-meta">
+                            <span class="project-status">Community Pilot</span>
+                            <span class="project-impact-pill">9 wards</span>
+                        </div>
                         <h3 class="text-xl font-semibold mb-2">Zero Waste Community</h3>
-                        <p class="text-gray-600 mb-4">Establishing comprehensive recycling programs in local
-                            neighborhoods.</p>
-                        <a href="#" class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700">Learn
-                            More</a>
+                        <p class="text-gray-600 mb-4">Building ward-level segregation, collection, and awareness systems that reduce landfill dependency.</p>
+                        <a href="#" class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700">Learn More</a>
                     </div>
-                </div>
-                <div class="project-card bg-white rounded-2xl overflow-hidden lift-card">
-                    <img loading="lazy" src="https://source.unsplash.com/random/400x300/?education" alt="Community education project"
+                </article>
+                <article class="project-card bg-white rounded-2xl overflow-hidden lift-card">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80" alt="Community education project"
                         class="w-full h-48 object-cover">
                     <div class="p-6">
+                        <div class="project-meta">
+                            <span class="project-status">Scaled Outreach</span>
+                            <span class="project-impact-pill">46 schools</span>
+                        </div>
                         <h3 class="text-xl font-semibold mb-2">Environmental Awareness Campaign</h3>
-                        <p class="text-gray-600 mb-4">Educating schools and communities about sustainable living
-                            practices.</p>
-                        <a href="#" class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700">Learn
-                            More</a>
+                        <p class="text-gray-600 mb-4">Running school and neighborhood programs that turn sustainability education into repeated local action.</p>
+                        <a href="#" class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700">Learn More</a>
                     </div>
-                </div>
-                <div class="project-card bg-white rounded-2xl overflow-hidden lift-card">
-                    <img loading="lazy" src="https://source.unsplash.com/random/400x300/?river" alt="River restoration project"
+                </article>
+                <article class="project-card bg-white rounded-2xl overflow-hidden lift-card">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1473773508845-188df298d2d1?auto=format&fit=crop&w=900&q=80" alt="River restoration project"
                         class="w-full h-48 object-cover">
                     <div class="p-6">
+                        <div class="project-meta">
+                            <span class="project-status">Volunteer Intensive</span>
+                            <span class="project-impact-pill">17 cleanup days</span>
+                        </div>
                         <h3 class="text-xl font-semibold mb-2">River Cleanup Initiative</h3>
-                        <p class="text-gray-600 mb-4">Restoring polluted waterways through community clean-up efforts.</p>
-                        <a href="#" class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700">Learn
-                            More</a>
+                        <p class="text-gray-600 mb-4">Combining cleanup drives with runoff mapping and resident stewardship for polluted waterways.</p>
+                        <a href="#" class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700">Learn More</a>
                     </div>
-                </div>
-                <div class="project-card bg-white rounded-2xl overflow-hidden lift-card">
-                    <img loading="lazy" src="https://source.unsplash.com/random/400x300/?solar" alt="Renewable energy project"
+                </article>
+                <article class="project-card bg-white rounded-2xl overflow-hidden lift-card">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80" alt="Renewable energy project"
                         class="w-full h-48 object-cover">
                     <div class="p-6">
+                        <div class="project-meta">
+                            <span class="project-status">Advisory Program</span>
+                            <span class="project-impact-pill">24 institutions</span>
+                        </div>
                         <h3 class="text-xl font-semibold mb-2">Solar Power Adoption</h3>
-                        <p class="text-gray-600 mb-4">Promoting renewable energy solutions for sustainable development.</p>
-                        <a href="#" class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700">Learn
-                            More</a>
+                        <p class="text-gray-600 mb-4">Helping institutions evaluate practical solar adoption as part of broader sustainability planning.</p>
+                        <a href="#" class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700">Learn More</a>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
